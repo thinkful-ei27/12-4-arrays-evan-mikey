@@ -134,3 +134,16 @@ function decoder2 (str) {
 }
 
 console.log(decoder2(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
+
+// function decoder2 (str) {
+    // const strArr = str.split(' ');
+    // return strArr.reduce((decodedWord, word) => {
+        // if (word.length === 3) {
+            // return decodedWord = decodedWord.concat(' ');
+        // }
+        //    return decodedWord= decodedWord.concat(word.charAt(word.length - 1).toUpperCase());
+// 
+    // }, '')
+// }
+// 
+// console.log(decoder2(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
