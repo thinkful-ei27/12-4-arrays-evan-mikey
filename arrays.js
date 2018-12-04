@@ -10,7 +10,7 @@ while(i < numbers.length){
 return max;
 };
 
-console.log(max([20,2,3,5,7,45,8,7,4,3]));
+// console.log(max([20,2,3,5,7,45,8,7,4,3]));
 
 function min(numbers){
     let min = numbers[0];
@@ -25,4 +25,23 @@ return min;
 };
 
 
-console.log(min([20,6,8,5,7,6,8,7,4,3]));
+// console.log(min([20,6,8,5,7,6,8,7,4,3]));
+
+function computedAverage (numbers) {
+    let sum = 0;
+    numbers.forEach(number => {
+        sum = sum + number
+    })
+    return sum / numbers.length;
+}
+
+
+console.log(computedAverage([20,6,8,5,7,6,8,7,4,3]));
+
+
+
+
+
+
+
+
