@@ -63,19 +63,42 @@ function hazardWarningCreator(typeOfWarning){
     
 
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
 
 
-rocksWarning('Main St and Pacific Ave');
-// => DANGER There is a Rocks on the Road hazard at Main St and Pacific Ave
-// => The Rocks on the Road hazard has triggered 1 time(s) today!
+// rocksWarning('Main St and Pacific Ave');
+// // => DANGER There is a Rocks on the Road hazard at Main St and Pacific Ave
+// // => The Rocks on the Road hazard has triggered 1 time(s) today!
 
-rocksWarning('Centinela Ave and Olympic Blvd');
-// => DANGER There is a Rocks on the Road hazard at Centinela Ave and Olympic Blvd
-// => The Rocks on the Road hazard has triggered 2 time(s) today!
+// rocksWarning('Centinela Ave and Olympic Blvd');
+// // => DANGER There is a Rocks on the Road hazard at Centinela Ave and Olympic Blvd
+// // => The Rocks on the Road hazard has triggered 2 time(s) today!
 
-// Invoke the other hazard creators you instantiated, too
+// // Invoke the other hazard creators you instantiated, too
 
-rocksWarning('Main St and Pacifi street');
+// rocksWarning('Main St and Pacifi street');
 
-rocksWarning('Main St and Pacific lane');
+// rocksWarning('Main St and Pacific lane');
+
+
+const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]
+
+function filterNegativeSteps (arr) {
+   return arr.filter(step => {
+        return step[0] >= 0 && step[1] >= 0 ; 
+    })
+}
+
+
+
+function addSteps (arr) {
+    return arr.map(step => Math.abs(step[0] + step[1]));
+    }
+
+function howManySteps (arr) {
+   return arr.forEach (step => {
+    console.log(step[0] + step[1])
+    });
+}
+
+console.log(howManySteps(turtle));
