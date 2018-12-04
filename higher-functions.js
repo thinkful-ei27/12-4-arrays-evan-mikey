@@ -103,21 +103,34 @@ function howManySteps (arr) {
 
 // console.log(howManySteps(turtle));
 
-function decoder(str){
- const strArray= str.split(' ');
- const codeArray = [];
-for (i = 0; i < strArray.length; i ++ ){
- if (strArray[i].length === 3 ){
-     codeArray.push(' ')}
- if(strArray[i].length !== 3 ) {codeArray.push(strArray[i].charAt(strArray[i].length - 1).toUpperCase())};
-console.log(codeArray)
-}
-return codeArray.reduce();
+// function decoder(str){
+//  const strArray= str.split(' ');
+//  const codeArray = [];
+// for (i = 0; i < strArray.length; i ++ ){
+//  if (strArray[i].length === 3 ){
+//      codeArray.push(' ')}
+//  if(strArray[i].length !== 3 ) {codeArray.push(strArray[i].charAt(strArray[i].length - 1).toUpperCase())};
+// console.log(codeArray)
+// }
+// return codeArray.reduce();
 
  
  //  strArray.reduce((acc , curr) => {  }, '');
 //  console.log(strArray);
 
 
+// }
+// console.log( decoder(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
+
+function decoder2 (str) {
+    const strArr = str.split(' ');
+    return strArr.reduce((decodedWord, word) => {
+        if (word.length === 3) {
+            return decodedWord += ' ';
+        }
+           return decodedWord += word.charAt(word.length - 1).toUpperCase();
+
+    }, '')
 }
-console.log( decoder(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
+
+console.log(decoder2(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
