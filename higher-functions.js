@@ -101,4 +101,23 @@ function howManySteps (arr) {
     });
 }
 
-console.log(howManySteps(turtle));
+// console.log(howManySteps(turtle));
+
+function decoder(str){
+ const strArray= str.split(' ');
+ const codeArray = [];
+for (i = 0; i < strArray.length; i ++ ){
+ if (strArray[i].length === 3 ){
+     codeArray.push(' ')}
+ if(strArray[i].length !== 3 ) {codeArray.push(strArray[i].charAt(strArray[i].length - 1).toUpperCase())};
+console.log(codeArray)
+}
+return codeArray.reduce();
+
+ 
+ //  strArray.reduce((acc , curr) => {  }, '');
+//  console.log(strArray);
+
+
+}
+console.log( decoder(`noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest`));
